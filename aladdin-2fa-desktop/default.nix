@@ -5,7 +5,7 @@
 { stdenv
 , fetchurl
 , writeShellScript
-, buildFHSUserEnv
+, buildFHSEnv
 , dpkg
 , coreutils
 , xorg
@@ -31,7 +31,7 @@
       };
     };
   in {
-  aladdin-2fa-desktop = buildFHSUserEnv {
+  aladdin-2fa-desktop = buildFHSEnv {
     inherit name;
     targetPkgs = pkgs: [ aladdin-2fa-desktop-dpkg ];
     multiPkgs = pkgs: [
